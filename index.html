@@ -1,196 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Pinterest Clone</title>
-  </head>
-  <body>
+</head>
+<body>
+
     <aside class="pinterest-sidebar">
-      <div class="sidebar-top">
-        <div class="logo" id="logo-home">
-          <img
-            src="https://pngimg.com/uploads/pinterest/pinterest_PNG45.png"
-            alt="Pinterest Logo"
-          />
+        <div class="sidebar-top">
+            <div class="logo" id="logo-home">
+                <img src="https://pngimg.com/uploads/pinterest/pinterest_PNG45.png" alt="Pinterest Logo">
+            </div>
+            <button class="icon-btn active" title="Inicio">
+                <img src="./img/material-symbols--home.svg" alt="Inicio">
+            </button>
+            <button class="icon-btn" title="Explorar">
+                <img src="./img/explore.svg" alt="Explorar">
+            </button>
+            <button class="icon-btn" title="Tableros">
+                <img src="./img/table.svg" alt="Tableros">
+            </button>
+            <button class="icon-btn" title="Crear">
+                <img src="./img/crear.svg" alt="Crear">
+            </button>
+            <button class="icon-btn" title="Notificaciones">
+                <img src="./img/notificacion.svg" alt="Notificaciones">
+            </button>
+            <button class="icon-btn" title="Mensajes">
+                <img src="./img/mensaje.svg" alt="Mensajes">
+            </button>
         </div>
-        <button class="icon-btn active" title="Inicio">
-          <img src="./img/material-symbols--home.svg" alt="Inicio" />
-        </button>
-        <button class="icon-btn" title="Explorar">
-          <img src="./img/explore.svg" alt="Explorar" />
-        </button>
-        <button class="icon-btn" title="Tableros">
-          <img src="./img/table.svg" alt="Tableros" />
-        </button>
-        <button class="icon-btn" title="Crear">
-          <img src="./img/crear.svg" alt="Crear" />
-        </button>
-        <button class="icon-btn" title="Notificaciones">
-          <img src="./img/notificacion.svg" alt="Notificaciones" />
-        </button>
-        <button class="icon-btn" title="Mensajes">
-          <img src="./img/mensaje.svg" alt="Mensajes" />
-        </button>
-      </div>
-      <div class="sidebar-bottom">
-        <button class="icon-btn" title="Configuración">
-          <img src="./img/configuracion.svg" alt="Configuración" />
-        </button>
-      </div>
+        <div class="sidebar-bottom">
+            <button class="icon-btn" title="Configuración">
+                <img src="./img/configuracion.svg" alt="Configuración">
+            </button>
+        </div>
     </aside>
 
     <div class="app-container">
-      <header class="top-header">
-        <div class="search-bar-container">
-          <span class="search-icon">
-            <svg height="16" width="16" viewBox="0 0 24 24" fill="#767676">
-              <path
-                d="M10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m10.21 4.79l-4.54-4.54A8.014 8.014 0 0018 10c0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8c1.85 0 3.55-.63 4.9-.16l4.54 4.54c.39.39 1.02.39 1.41 0 .38-.39.39-1.03 0-1.42z"
-              ></path>
-            </svg>
-          </span>
-          <input type="text" id="search-input" placeholder="Buscar" />
-        </div>
-      </header>
+        
+        <header class="top-header">
+            <div class="search-bar-container">
+                <span class="search-icon">
+                    <svg height="16" width="16" viewBox="0 0 24 24" fill="#767676">
+                        <path d="M10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m10.21 4.79l-4.54-4.54A8.014 8.014 0 0018 10c0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8c1.85 0 3.55-.63 4.9-.16l4.54 4.54c.39.39 1.02.39 1.41 0 .38-.39.39-1.03 0-1.42z"></path>
+                    </svg>
+                </span>
+                <input type="text" id="search-input" placeholder="Buscar">
+            </div>
+        </header>
 
-      <div class="categories-container">
-        <button class="pill active" data-category="all">Para ti</button>
-      </div>
-
-      <main class="main-content">
-        <div id="grid-container" class="pin-grid">
-          <div class="pin-card">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1670264592766-0ae99e33aacd?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1667655866927-c334f8db27ae?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1670718089430-d75ba6c1a194?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1652087069456-06fb70235fa2?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1670513756456-6d51163ff25c?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1670718221502-42bee4ee96c7?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1670948516733-0220701ea0de?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1670787505396-31741dac157c?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1670531910262-5ddb5ad666ea?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1670896329450-066bc7c029f5?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1670116425207-7ff3a28c6a08?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1668789466501-f9c8b4ca7e42?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1669627960590-5aa33748cddf?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1669462277329-f32f928a4a79?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1669720229052-89cda125fc3f?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1646004882668-2e3936d59866?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1661786638637-163e874150f0?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
-          <div class="pin-card">
-            <img
-              src="https://images.unsplash.com/photo-1669072256973-481dce2c7599?ixlib=rb-4.0.3&w=500&q=60"
-              alt=""
-            />
-            <button class="btn-save">Guardar</button>
-          </div>
+        <div class="categories-container">
+            <button class="pill active" data-category="all">Para ti</button>
         </div>
-      </main>
+
+        <main class="main-content">
+            <div id="grid-container" class="pin-grid">
+                
+                <div class="pin-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1670264592766-0ae99e33aacd?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1667655866927-c334f8db27ae?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1670718089430-d75ba6c1a194?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1652087069456-06fb70235fa2?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1670513756456-6d51163ff25c?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1670718221502-42bee4ee96c7?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1670948516733-0220701ea0de?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1670787505396-31741dac157c?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1670531910262-5ddb5ad666ea?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1670896329450-066bc7c029f5?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1670116425207-7ff3a28c6a08?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1668789466501-f9c8b4ca7e42?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1669627960590-5aa33748cddf?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1669462277329-f32f928a4a79?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1669720229052-89cda125fc3f?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1646004882668-2e3936d59866?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1661786638637-163e874150f0?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+                <div class="pin-card">
+                    <img src="https://images.unsplash.com/photo-1669072256973-481dce2c7599?ixlib=rb-4.0.3&w=500&q=60" alt="">
+                    <button class="btn-save">Guardar</button>
+                </div>
+
+            </div>
+        </main>
     </div>
 
-    <script src="index.js"></script>
-  </body>
+    <script src="./js/index.js" ></script>
+</body>
 </html>
